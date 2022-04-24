@@ -38,3 +38,15 @@ func generateListNode(nums []int) *ListNode {
 
 	return start
 }
+
+func generateList(l *ListNode) []int {
+	printListNode(l)
+
+	current := l
+	list := make([]int, 0)
+	for current != nil {
+		list = append(list, current.Val)
+		current = current.Next
+	}
+	return list
+}

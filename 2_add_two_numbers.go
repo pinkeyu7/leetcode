@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 	var start *ListNode
 	var current *ListNode
@@ -59,8 +57,6 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 		}
 
 	}
-
-	fmt.Println(*start)
 
 	return start
 }
