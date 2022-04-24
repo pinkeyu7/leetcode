@@ -10,6 +10,19 @@ const (
 	intMin = -2147483648
 )
 
+func sortString2D(input [][]string) [][]string {
+	sort.Slice(input[:], func(i, j int) bool {
+		for x := range input[i] {
+			if input[i][x] == input[j][x] {
+				continue
+			}
+			return input[i][x] < input[j][x]
+		}
+		return false
+	})
+	return input
+}
+
 func sortInt2D(input [][]int) [][]int {
 	sort.Slice(input[:], func(i, j int) bool {
 		for x := range input[i] {
