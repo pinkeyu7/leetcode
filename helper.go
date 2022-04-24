@@ -1,12 +1,29 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"sort"
+)
 
 const (
 	intMax = 2147483648
 	intMin = -2147483648
 )
 
+func sortInt2D(input [][]int) [][]int {
+	sort.Slice(input[:], func(i, j int) bool {
+		for x := range input[i] {
+			if input[i][x] == input[j][x] {
+				continue
+			}
+			return input[i][x] < input[j][x]
+		}
+		return false
+	})
+	return input
+}
+
+// ListNode Related
 type ListNode struct {
 	Val  int
 	Next *ListNode
