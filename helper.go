@@ -2,6 +2,11 @@ package main
 
 import "fmt"
 
+const (
+	intMax = 2147483648
+	intMin = -2147483648
+)
+
 type ListNode struct {
 	Val  int
 	Next *ListNode
