@@ -104,3 +104,10 @@ func reverseString(s string) string {
 	// return the reversed string.
 	return string(rns)
 }
+
+func abs(x int) int {
+	if x < 0 {
+		return -x
+	}
+	return x
+}
