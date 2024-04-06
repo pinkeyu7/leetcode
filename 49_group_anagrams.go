@@ -2,7 +2,6 @@ package main
 
 import (
 	"sort"
-	"strings"
 )
 
 func groupAnagrams(strs []string) [][]string {
@@ -19,10 +18,4 @@ func groupAnagrams(strs []string) [][]string {
 	}
 
 	return res
-}
-
-func sortString(w string) string {
-	s := strings.Split(w, "")
-	sort.Strings(s)
-	return strings.Join(s, "")
 }

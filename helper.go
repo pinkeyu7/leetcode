@@ -10,6 +10,15 @@ const (
 	intMin = -2147483648
 )
 
+func sortString(s string) string {
+	w := []rune(s)
+	sort.Slice(w, func(i, j int) bool {
+		return w[i] < w[j] //sort the string rune
+	})
+
+	return string(w)
+}
+
 func sortString2D(input [][]string) [][]string {
 	sort.Slice(input[:], func(i, j int) bool {
 		for x := range input[i] {
